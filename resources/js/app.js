@@ -6,6 +6,7 @@
 
 require('./bootstrap');
 
+import Vue from 'vue';
 window.Vue = require('vue');
 
 /**
@@ -26,6 +27,14 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+// const app = new Vue({
+//   el: '#app'
+// });
+
+require('./components/SelectDistrict');
+require('./components/SelectDistrict');
+require('./components/UserAddressesCreateAndEdit');
+
 const app = new Vue({
-    el: '#app',
+  el: '#app'
 });

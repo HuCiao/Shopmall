@@ -56,6 +56,9 @@ class UserAddressesController extends Controller
      */
     public function edit(UserAddress $user_address)
     {
+        //在控制器中添加校验权限的代码
+        $this->authorize('own', $user_address);
+
         return view('user_addresses.create_and_edit', ['address' => $user_address]);
     }
 
@@ -67,6 +70,9 @@ class UserAddressesController extends Controller
      */
     public function update(UserAddress $user_address, UserAddressRequest $request)
     {
+        //在控制器中添加校验权限的代码
+        $this->authorize('own', $user_address);
+
         $user_address->update($request->only([
             'province',
             'city',
@@ -78,5 +84,20 @@ class UserAddressesController extends Controller
         ]));
 
         return redirect()->route('user_addresses.index');
+    }
+
+    /**
+     * 删除收货地址
+     * @param UserAddress $user_address
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function destroy(UserAddress $user_address)
+    {
+        //在控制器中添加校验权限的代码
+        $this->authorize('own', $user_address);
+
+        $user_address->delete();
+
+        return [];
     }
 }

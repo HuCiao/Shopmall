@@ -37,6 +37,9 @@ body {
   margin-bottom: 60px;
 
   .products-index-page {
+    .pagination {
+      margin-right: 5px;
+    }
     .products-list {
       padding: 0 15px;
       .product-item {

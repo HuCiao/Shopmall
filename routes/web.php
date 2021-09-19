@@ -35,6 +35,12 @@ Route::group(['middleware' => ['auth', 'verified']], function() {
 
     //保存新增的地址信息
     Route::post('user_addresses', 'UserAddressesController@store')->name('user_addresses.store');
+
+    //修改收货地址页面
+    Route::get('user_addresses/{user_address}', 'UserAddressesController@edit')->name('user_addresses.edit');
+
+    //修改收货地址信息
+    Route::put('user_addresses/{user_address}', 'UserAddressesController@update')->name('user_addresses.update');
 });
 
 

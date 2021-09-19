@@ -20,7 +20,7 @@ use Illuminate\Http\Request;
  * 如果一个未验证邮箱的用户尝试访问一个配置了 verified 中间件的路由，就会提示该用户邮箱未激活。
  */
 //Route::get('/', 'PagesController@root')->name('root')->middleware('verified');
-Route::get('/', 'PagesController@root')->name('root');
+//Route::get('/', 'PagesController@root')->name('root');
 
 // 启用邮箱相关验证路由
 Auth::routes(['verify' => true]);
@@ -45,6 +45,10 @@ Route::group(['middleware' => ['auth', 'verified']], function() {
     //删除收货地址信息
     Route::delete('user_addresses/{user_address}', 'UserAddressesController@destroy')->name('user_addresses.destroy');
 });
+
+Route::redirect('/', '/products')->name('root');
+
+Route::get('products', 'ProductsController@index')->name('products.index');
 
 
 

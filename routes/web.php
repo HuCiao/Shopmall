@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+/**
+ * 商城首页
+ * 如果一个未验证邮箱的用户尝试访问一个配置了 verified 中间件的路由，就会提示该用户邮箱未激活。
+ */
+//Route::get('/', 'PagesController@root')->name('root')->middleware('verified');
+Route::get('/', 'PagesController@root')->name('root');
+
+// 启用邮箱相关验证路由
+Auth::routes(['verify' => true]);
+
+// auth 中间件代表需要登录，verified中间件代表需要经过邮箱验证
+Route::group(['middleware' => ['auth', 'verified']], function() {
+    Route::get('user_addresses', 'UserAddressesController@index')->name('user_addresses.index');
 });
+
+
+

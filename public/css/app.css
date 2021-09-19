@@ -10973,6 +10973,12 @@ body {
   margin-bottom: 60px;
 }
 
+body .products-index-page .search-form {
+  padding: 0 5px 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
 body .products-index-page .pagination {
   margin-right: 5px;
 }

@@ -51,6 +51,13 @@ Route::group(['middleware' => ['auth', 'verified']], function() {
     Route::delete('products/{product}/favorite', 'ProductsController@disfavor')->name('products.disfavor');
     //收藏商品列表页面
     Route::get('products/favorites', 'ProductsController@favorites')->name('products.favorites');
+
+    //添加商品到购物车
+    Route::post('cart', 'CartController@add')->name('cart.add');
+    //购物车界面
+    Route::get('cart', 'CartController@index')->name('cart.index');
+    //商品移出购物车
+    Route::delete('cart/{sku}', 'CartController@remove')->name('cart.remove');
 });
 
 Route::redirect('/', '/products')->name('root');

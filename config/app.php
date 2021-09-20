@@ -237,8 +237,13 @@ return [
     ],
 
     /**
-     * 订单持续时间为30s
+     * 订单持续时间为1800s
      */
-    'order_ttl' => 30,
+    'order_ttl' => 1800,
+
+    /**
+     * 内网穿刺路径
+     */
+    'ngrok_url' => env('NGROK_URL'),
 
 ];

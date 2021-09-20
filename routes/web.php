@@ -49,6 +49,8 @@ Route::group(['middleware' => ['auth', 'verified']], function() {
     Route::post('products/{product}/favorite', 'ProductsController@favor')->name('products.favor');
     //取消收藏
     Route::delete('products/{product}/favorite', 'ProductsController@disfavor')->name('products.disfavor');
+    //收藏商品列表页面
+    Route::get('products/favorites', 'ProductsController@favorites')->name('products.favorites');
 });
 
 Route::redirect('/', '/products')->name('root');

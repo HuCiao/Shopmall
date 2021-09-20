@@ -10973,84 +10973,100 @@ body {
   margin-bottom: 60px;
 }
 
-body .products-index-page .search-form {
+body .products-index-page .search-form,
+body .products-favorites-page .search-form {
   padding: 0 5px 10px;
   margin-bottom: 10px;
   border-bottom: 1px solid #eee;
 }
 
-body .products-index-page .pagination {
+body .products-index-page .pagination,
+body .products-favorites-page .pagination {
   margin-right: 5px;
 }
 
-body .products-index-page .products-list {
+body .products-index-page .products-list,
+body .products-favorites-page .products-list {
   padding: 0 15px;
 }
 
-body .products-index-page .products-list .product-item {
+body .products-index-page .products-list .product-item,
+body .products-favorites-page .products-list .product-item {
   padding: 0 5px;
   margin-bottom: 10px;
 }
 
-body .products-index-page .products-list .product-item .product-content {
+body .products-index-page .products-list .product-item .product-content,
+body .products-favorites-page .products-list .product-item .product-content {
   border: 1px solid #eee;
 }
 
-body .products-index-page .products-list .product-item .product-content .top {
+body .products-index-page .products-list .product-item .product-content .top,
+body .products-favorites-page .products-list .product-item .product-content .top {
   padding: 5px;
 }
 
-body .products-index-page .products-list .product-item .product-content .top img {
+body .products-index-page .products-list .product-item .product-content .top img,
+body .products-favorites-page .products-list .product-item .product-content .top img {
   width: 100%;
 }
 
-body .products-index-page .products-list .product-item .product-content .top .price {
+body .products-index-page .products-list .product-item .product-content .top .price,
+body .products-favorites-page .products-list .product-item .product-content .top .price {
   margin-top: 5px;
   font-size: 20px;
   color: #ff0036;
 }
 
-body .products-index-page .products-list .product-item .product-content .top .price b {
+body .products-index-page .products-list .product-item .product-content .top .price b,
+body .products-favorites-page .products-list .product-item .product-content .top .price b {
   font-size: 14px;
 }
 
-body .products-index-page .products-list .product-item .product-content .top .title {
+body .products-index-page .products-list .product-item .product-content .top .title,
+body .products-favorites-page .products-list .product-item .product-content .top .title {
   margin-top: 10px;
   height: 32px;
   line-height: 12px;
   max-height: 32px;
 }
 
-body .products-index-page .products-list .product-item .product-content .top .title a {
+body .products-index-page .products-list .product-item .product-content .top .title a,
+body .products-favorites-page .products-list .product-item .product-content .top .title a {
   font-size: 12px;
   line-height: 14px;
   color: #333;
   text-decoration: none;
 }
 
-body .products-index-page .products-list .product-item .product-content .bottom {
+body .products-index-page .products-list .product-item .product-content .bottom,
+body .products-favorites-page .products-list .product-item .product-content .bottom {
   font-size: 12px;
   display: flex;
 }
 
-body .products-index-page .products-list .product-item .product-content .bottom .sold_count span {
+body .products-index-page .products-list .product-item .product-content .bottom .sold_count span,
+body .products-favorites-page .products-list .product-item .product-content .bottom .sold_count span {
   color: #b57c5b;
   font-weight: bold;
 }
 
-body .products-index-page .products-list .product-item .product-content .bottom .review_count span {
+body .products-index-page .products-list .product-item .product-content .bottom .review_count span,
+body .products-favorites-page .products-list .product-item .product-content .bottom .review_count span {
   color: #38b;
   font-weight: bold;
 }
 
-body .products-index-page .products-list .product-item .product-content .bottom > div {
+body .products-index-page .products-list .product-item .product-content .bottom > div,
+body .products-favorites-page .products-list .product-item .product-content .bottom > div {
   padding: 10px 5px;
   line-height: 12px;
   flex-grow: 1;
   border-top: 1px solid #eee;
 }
 
-body .products-index-page .products-list .product-item .product-content .bottom > div:first-child {
+body .products-index-page .products-list .product-item .product-content .bottom > div:first-child,
+body .products-favorites-page .products-list .product-item .product-content .bottom > div:first-child {
   border-right: 1px solid #eee;
 }
 

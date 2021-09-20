@@ -51,4 +51,11 @@ Route::redirect('/', '/products')->name('root');
 Route::get('products', 'ProductsController@index')->name('products.index');
 
 
+Route::get('products', 'ProductsController@index')->name('products.index');
+
+//展示商品详情页
+Route::get('products/{product}', 'ProductsController@show')->name('products.show');
+
+
+
 

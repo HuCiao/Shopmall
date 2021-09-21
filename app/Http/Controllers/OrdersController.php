@@ -50,6 +50,7 @@ class OrdersController extends Controller
 
     /**
      * 收货接口
+     * @return $order
      */
     public function received(Order $order, Request $request)
     {
@@ -64,7 +65,7 @@ class OrdersController extends Controller
         // 更新发货状态为已收到
         $order->update(['ship_status' => Order::SHIP_STATUS_RECEIVED]);
 
-        // 返回原页面
-        return redirect()->back();
+        // 返回订单信息
+        return $order;
     }
 }

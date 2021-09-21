@@ -74,6 +74,11 @@ Route::group(['middleware' => ['auth', 'verified']], function() {
 
     //收货路由
     Route::post('orders/{order}/received', 'OrdersController@received')->name('orders.received');
+
+    //评论界面
+    Route::get('orders/{order}/review', 'OrdersController@review')->name('orders.review.show');
+    //保存评论
+    Route::post('orders/{order}/review', 'OrdersController@sendReview')->name('orders.review.store');
 });
 
 //支付后端回调确认

@@ -16020,7 +16020,8 @@ body .orders-show-page {
 }
 
 body .orders-show-page .payment-buttons,
-body .orders-show-page .receive-button {
+body .orders-show-page .receive-button,
+body .orders-show-page .refund-button {
   margin-top: 10px;
   padding-right: 10px;
 }
